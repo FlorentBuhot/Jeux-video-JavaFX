@@ -1,35 +1,13 @@
-import arrierePlans.*;
-import fabriquerDecors.*;
-import sols.Sol;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 
 public class Decor {
+    //Definition d'une propriété pour l'attribut image (utile pour le binding plus tard)
+    private  StringProperty image = new SimpleStringProperty();
 
-    private Sol sol;
-    private ArrierePlan arrierePlan;
-    private FabriqueDecor fabriqueDecor;
+    public String getImage(){return image.get();}
+    public void setToto(String value){image.set(value);}
 
-    public Decor(Sol sol, ArrierePlan arrierePlan, FabriqueDecor fabriqueDecor) {
-        this.sol = sol;
-        this.arrierePlan = arrierePlan;
-        this.fabriqueDecor = fabriqueDecor;
-    }
-    public Sol getSol() {return sol;}
-
-    public void setSol(Sol sol) {this.sol = sol;}
-
-    public ArrierePlan getArrierePlan() {return arrierePlan;}
-
-    public void setArrierePlan(ArrierePlan arrierePlan) {
-        this.arrierePlan = arrierePlan;
-    }
-
-    public FabriqueDecor getFabriqueDecor() {
-        return fabriqueDecor;
-    }
-
-    public void setFabriqueDecor(FabriqueDecor fabriqueDecor) {
-        this.fabriqueDecor = fabriqueDecor;
-    }
-
+    public StringProperty imageProperty(){return image;}
 
 }

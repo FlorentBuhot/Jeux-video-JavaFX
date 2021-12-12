@@ -1,0 +1,3 @@
+-Intention = isolé dans une classe
+-Collisionneur, déplaceur, maitre du jeu(connait tous les autres)
+-Faire diagramme de séquence = permet illustrer 
